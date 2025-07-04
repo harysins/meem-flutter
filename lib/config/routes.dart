@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import '../screens/splash/splash_screen.dart'; // هذا يحتوي على SplashScreen الأساسية
-import '../screens/auth/login_screen.dart'
-    as auth; // <--- أضفنا بادئة 'auth' هنا
-import '../screens/auth/register_screen.dart'
-    as auth; // <--- ومن المحتمل أن تحتاجها هنا أيضًا إذا كان RegisterScreen يحتوي على SplashScreen
+import '../screens/splash/splash_screen.dart';
+import '../screens/auth/login_screen.dart';
+import '../screens/auth/register_screen.dart';
 import '../screens/home/home_screen.dart';
 import '../screens/bot/bot_screen.dart';
 import '../screens/projects/projects_library_screen.dart';
@@ -31,8 +29,7 @@ class AppRoutes {
   static const String botRoute = '/bot';
   static const String projectsLibraryRoute = '/projects_library';
   static const String createProjectRoute = '/create_project';
-  static const String feasibilityQuestionnaireRoute =
-      '/feasibility_questionnaire';
+  static const String feasibilityQuestionnaireRoute = '/feasibility_questionnaire';
   static const String feasibilityReportRoute = '/feasibility_report';
   static const String marketingDashboardRoute = '/marketing_dashboard';
   static const String adGeneratorRoute = '/ad_generator';
@@ -48,16 +45,14 @@ class AppRoutes {
   static const String countryCitySelectionRoute = '/country_city_selection';
 
   static Map<String, WidgetBuilder> routes = {
-    splashRoute: (context) => SplashScreen(), // لا يزال بدون بادئة
-    loginRoute: (context) => auth.LoginScreen(), // <--- استخدمنا البادئة هنا
-    registerRoute: (context) =>
-        auth.RegisterScreen(), // <--- استخدمنا البادئة هنا
+    splashRoute: (context) => SplashScreen(),
+    loginRoute: (context) => LoginScreen(),
+    registerRoute: (context) => RegisterScreen(),
     homeRoute: (context) => HomeScreen(),
     botRoute: (context) => BotScreen(),
     projectsLibraryRoute: (context) => ProjectsLibraryScreen(),
     createProjectRoute: (context) => CreateProjectScreen(),
-    feasibilityQuestionnaireRoute: (context) =>
-        FeasibilityQuestionnaireScreen(),
+    feasibilityQuestionnaireRoute: (context) => FeasibilityQuestionnaireScreen(),
     feasibilityReportRoute: (context) => FeasibilityReportScreen(),
     marketingDashboardRoute: (context) => MarketingDashboardScreen(),
     adGeneratorRoute: (context) => AdGeneratorScreen(),
