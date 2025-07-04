@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../screens/splash/splash_screen.dart';
-import '../screens/auth/login_screen.dart';
+import '../screens/splash/splash_screen.dart' as splash;
+import '../screens/auth/login_screen.dart' as auth;
 import '../screens/auth/register_screen.dart';
 import '../screens/home/home_screen.dart';
 import '../screens/bot/bot_screen.dart';
@@ -45,8 +45,8 @@ class AppRoutes {
   static const String countryCitySelectionRoute = '/country_city_selection';
 
   static Map<String, WidgetBuilder> routes = {
-    splashRoute: (context) => SplashScreen(),
-    loginRoute: (context) => LoginScreen(),
+    splashRoute: (context) => splash.SplashScreen(),
+    loginRoute: (context) => auth.LoginScreen(),
     registerRoute: (context) => RegisterScreen(),
     homeRoute: (context) => HomeScreen(),
     botRoute: (context) => BotScreen(),
